@@ -1,6 +1,6 @@
 package com.spotmini.songs.data;
 
-public class Artist {
+public class ArtistModel {
     private String name;
 
     public String getName() {

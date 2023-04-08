@@ -4,12 +4,12 @@ import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 @Table
-public class Artists {
+public class Artist {
     @PrimaryKey
     private String name;
     private boolean isDeleted;
 
-    public Artists(String name) {
+    public Artist(String name) {
         this.name = name;
         isDeleted = false;
     }

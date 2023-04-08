@@ -1,7 +1,7 @@
 package com.spotmini.songs.controllers;
 
-import com.spotmini.songs.data.Artist;
-import com.spotmini.songs.db.Artists;
+import com.spotmini.songs.data.ArtistModel;
+import com.spotmini.songs.db.Artist;
 import com.spotmini.songs.repositories.ArtistsRepository;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,11 +15,11 @@ public class ArtistsController {
     }
 
     @PostMapping
-    public void addArtist(@RequestBody Artist artist) {
+    public void addArtist(@RequestBody ArtistModel artist) {
         if (repository.findById(artist.getName()).isPresent()) {
             return;
         }
 
-        repository.save(new Artists(artist.getName()));
+        repository.save(new Artist(artist.getName()));
     }
 }
