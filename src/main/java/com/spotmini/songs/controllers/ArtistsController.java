@@ -15,7 +15,7 @@ public class ArtistsController {
     }
 
     @PostMapping
-    public void addArtist(@RequestBody ArtistModel artist) {
+    private void addArtist(@RequestBody ArtistModel artist) {
         if (repository.findById(artist.getName()).isPresent()) {
             return;
         }

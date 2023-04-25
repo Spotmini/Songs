@@ -1,0 +1,11 @@
+spring:
+    cassandra:
+        local-datacenter: datacenter1
+        keyspace-name: songs
+
+    kafka:
+        bootstrap-servers: localhost:29092, localhost:39092
+        consumer:
+            group-id: songs
+        listener:
+            type: batch
